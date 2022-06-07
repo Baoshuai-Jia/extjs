@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/classic/theme-triton/resources/theme-triton-all.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.2.0/ext-all.js"></script>
+    <script type="text/javascript">
+        //预览pdf，需要浏览器允许打开新的窗口
+        function openFile(filePath, wdbh, obj) {
+
+            var hzm = filePath.substring(filePath.lastIndexOf('.') + 1);
+
+            if ('pdf' === hzm) {
+                console.log("123")
+                var url =  '/upload/preview.do?method=pdfPreviw&filePath=' + filePath;
+                url = "https://drive.google.com/file/d/1kJJeabYl-NH4nsNV8kLs-qTUYESbUfMx/preview";
+                var name = "blankPrint"; //网页名称，可为空;
+
+                var iWidth = window.screen.availWidth / 2; //弹出窗口的宽度;
+
+                var iHeight = window.screen.availHeight / 2; //弹出窗口的高度;
+
+                var iTop = (window.screen.availHeight - 30 - iHeight) / 2; //获得窗口的垂直位置;
+
+                var iLeft = (window.screen.availWidth - 10 - iWidth) / 2; //获得窗口的水平位置;
+
+                window.open(url, name, 'resizable=yes,height=' + iHeight + ',innerHeight=' + iHeight + ',width=' + iWidth + ',innerWidth=' + iWidth + ',top=' + iTop + ',left=' + iLeft);
+
+            }
+        }
+        openFile("123.pdf")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

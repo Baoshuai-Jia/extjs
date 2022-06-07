@@ -1,0 +1,15 @@
+spring:
+  thymeleaf:
+    cache: false
+    # 以下是默认配置
+#    prefix: classpath:/templates/thy
+    #    suffix: .html
+    #    mode: HTML5
+    #    encoding: UTF-8
+    #    content-type: text/html
+    prefix: classpath:/templates/th/
+    # 警告 Cannot find template location: /templates/thy (please add some templates or check your Thymeleaf configuration)
+    check-template-location: false
+  freemarker:
+    cache: false
+    template-loader-path: classpath:/templates/ftl/
